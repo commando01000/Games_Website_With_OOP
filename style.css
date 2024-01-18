@@ -1,0 +1,69 @@
+.navbar .container {
+  background-color: #3a497b;
+  border-radius: 20px;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+  color: #09c !important;
+  transition: color 0.5s;
+}
+
+.site-title {
+  display: block;
+  padding-top: 5px;
+}
+
+#games {
+  background-color: #272b30;
+}
+
+body {
+  background-color: #272b30;
+}
+
+header {
+  background-color: #2e3237;
+}
+
+header img {
+  max-height: 30vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.card {
+  transform: scale(1, 1);
+  transition: all 0.5s;
+  background-color: #272b30;
+  color: azure;
+}
+
+.card:hover {
+  transform: scale(1.03, 1.03);
+  cursor: pointer;
+}
+
+#game-details {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120vh !important;
+  display: none;
+  background-color: #27282b;
+  opacity: 1;
+}
+
+#games {
+  display: block;
+}
+
+.btn-close {
+    position: relative;
+}
