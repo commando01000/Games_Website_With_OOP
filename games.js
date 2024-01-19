@@ -2,10 +2,9 @@ import { Display } from "./ui.js";
 import { default_category } from "./index.js";
 // import { category } from "./index.js";
 export class Games extends Display {
-    Games_Data = [];
+  Games_Data = [];
   async getAllGames(category) {
-    const url =
-      `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
+    const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
     const options = {
       method: "GET",
       headers: {
@@ -16,7 +15,22 @@ export class Games extends Display {
 
     try {
       this.Games_Data = [];
+      viewLoading();
       const response = await fetch(url, options);
+      //console.log(response);
+      function viewLoading() {
+        $(".loading").removeClass("d-none");
+        $(".loading").addClass("d-block");
+      }
+      if (response.ok) {
+        $(".loading").removeClass("d-block");
+        $(".loading").addClass("d-none");
+        console.log("Success");
+      } else {
+        $(".loading").removeClass("d-none");
+        $(".loading").addClass("d-block");
+        console.log("Error");
+      }
       const Games_JSON = await response.json();
       this.Games_Data = Games_JSON;
       return this.Games_Data;
@@ -25,7 +39,7 @@ export class Games extends Display {
       console.error(error);
     }
   }
-   async Display_Games(category) {
+  async Display_Games(category) {
     //console.log(category);
     this.Games_Data = await this.getAllGames(category);
     //console.log(this.Games_Data);

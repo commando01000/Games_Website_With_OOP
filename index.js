@@ -7,7 +7,8 @@ let myGame_Details = new Game_Details();
 let myGameDetails;
 let activeLink = category[0];
 export let default_category = "shooter";
-allGames.Display_Games(default_category);
+await allGames.Display_Games(default_category);
+
 //console.log(category);
 
 let myDisplayedGames = new Games();
