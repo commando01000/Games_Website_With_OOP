@@ -33,6 +33,7 @@ category.forEach((item) => {
     console.log(myGames);
     Data = document.querySelectorAll(".card");
     console.log(Data);
+
     Data.forEach((item) => {
       item.addEventListener("click", (e) => {
         console.log(item.attributes[0].value);
