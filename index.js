@@ -78,3 +78,11 @@ $(".btn-close").click(function (e) {
   document.getElementById("games").style.display = "block";
   myGameDetails = "";
 });
+
+$(window).scroll(function () { 
+  if ($(window).scrollTop() >= 150) {
+    $(".navbar").addClass("fixed-top");
+  } else {
+    $(".navbar").removeClass("fixed-top");
+  }
+});
