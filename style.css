@@ -143,6 +143,18 @@ a {
 } */
 
 .loading {
-    top: 45vh;
-    left: 50%;
+  top: 45vh;
+  left: 50%;
+}
+
+.nav-link {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+  font-size: 12.5px;
+  line-height: 18.375px;
+}
+
+.branding img {
+  width: 40px !important;
+  height: 40px !important;
 }
