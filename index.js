@@ -11,6 +11,16 @@ await allGames.Display_Games(default_category);
 
 //console.log(category);
 
+var offsetnavTop = $("nav").offset().top;
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() >= offsetnavTop) {
+    $(".navbar").addClass("fixed-top");
+  } else {
+    $(".navbar").removeClass("fixed-top");
+  }
+});
+
 let myDisplayedGames = new Games();
 
 let myGames = await myDisplayedGames.getAllGames(default_category);
@@ -77,14 +87,4 @@ $(".btn-close").click(function (e) {
   document.getElementById("game-details").style.display = "none";
   document.getElementById("games").style.display = "block";
   myGameDetails = "";
-});
-
-var offsetnavTop = $("nav").offset().top;
-
-$(window).scroll(function () {
-  if ($(window).scrollTop() >= offsetnavTop) {
-    $(".navbar").addClass("fixed-top");
-  } else {
-    $(".navbar").removeClass("fixed-top");
-  }
 });
