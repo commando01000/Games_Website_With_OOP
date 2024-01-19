@@ -79,8 +79,10 @@ $(".btn-close").click(function (e) {
   myGameDetails = "";
 });
 
-$(window).scroll(function () { 
-  if ($(window).scrollTop() >= 150) {
+var offsetnavTop = $("nav").offset().top;
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() >= offsetnavTop) {
     $(".navbar").addClass("fixed-top");
   } else {
     $(".navbar").removeClass("fixed-top");
