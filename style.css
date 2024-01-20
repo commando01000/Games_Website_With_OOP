@@ -51,8 +51,6 @@ a {
 
 #game-details {
   top: 0;
-  left: 0;
-  right: 0;
   /* height: 100vh !important; */
   display: none;
   background-color: #27282b;
