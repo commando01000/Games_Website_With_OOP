@@ -53,11 +53,14 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 120vh !important;
+  /* height: 100vh !important; */
   display: none;
   background-color: #27282b;
   opacity: 1;
+}
+
+#game-details .container {
+  height: 100%;
 }
 
 #games {
