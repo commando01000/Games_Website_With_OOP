@@ -52,7 +52,7 @@ export class Display {
     gameThumbnail.className = "col-md-6";
     gameThumbnail.innerHTML = `
       <div>Game Details:</div>
-      <div class="game-thumbnail pe-5"><img src="${Game_Data.thumbnail}" alt="Game Thumbnail"></div>
+      <div class="game-thumbnail"><img src="${Game_Data.thumbnail}" alt="Game Thumbnail"></div>
     `;
 
     const gameInfo = document.createElement("div");
